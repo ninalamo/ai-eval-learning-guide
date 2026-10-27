@@ -1,3 +1,5 @@
+> **Platforms:** Fedora, Ubuntu, macOS, Windows — [setup guide](../../curriculum/setup-your-machine.md). Use `uv run` from this folder after `uv sync`. On Windows, `cd exercises\week-NN` or forward slashes both work.
+
 # Week 16 — capstone checklist
 
 The submitted artifact is `capstone-report.md` plus a runnable 10-task suite.

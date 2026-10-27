@@ -17,6 +17,10 @@ A **personal 16-week curriculum** (markdown + Python exercise starters) and a **
 | `web/` | Next.js 15 App Router viewer (Tailwind v4) |
 | `.cursor/plans/` | Planning artifacts — do not edit unless the user asks |
 
+## Platforms
+
+Curriculum targets **Fedora, Ubuntu, macOS, and Windows**. Cross-platform setup lives in `curriculum/setup-your-machine.md` (viewer route `/setup`). Exercise code should use `pathlib`; Harbor `.sh` oracles are validated via `verify_local.py` on all hosts.
+
 ## Commands
 
 **Viewer (always from `web/`):**

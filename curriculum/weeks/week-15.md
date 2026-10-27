@@ -17,7 +17,7 @@ class Agent(Protocol):
     def run(self, instruction: str, cwd: Path) -> AgentResult: ...
 ```
 
-`StubAgent` is week 9 honest/noop. `CliAgent` shells out to `cmd` with the instruction on stdin or as argv. `CursorAgent` is optional (`Agent.prompt` from the Cursor SDK) if you have a key.
+`StubAgent` is week 9 honest/noop. `CliAgent` uses **`subprocess`** to run an external program (your CLI, `python -c`, etc.) with the instruction on stdin or argv — same pattern on Linux, macOS, and Windows; do not use `shell=True`. `CursorAgent` is optional (`Agent.prompt` from the Cursor SDK) if you have a key.
 
 The harness from week 9 calls `agent.run` then patch-replays. Do not skip replay because “the CLI is trusted.”
 

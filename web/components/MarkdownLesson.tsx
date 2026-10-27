@@ -11,7 +11,7 @@ type Props = {
 };
 
 const proseClass =
-  "prose prose-slate max-w-none prose-headings:scroll-mt-20 prose-headings:font-semibold prose-headings:tracking-tight prose-a:font-medium prose-a:text-indigo-600 prose-a:no-underline hover:prose-a:text-indigo-800 prose-code:rounded prose-code:bg-slate-100 prose-code:px-1 prose-code:py-0.5 prose-code:text-sm prose-code:before:content-none prose-code:after:content-none prose-pre:bg-slate-900 prose-pre:text-slate-100";
+  "lesson-prose prose prose-invert prose-slate max-w-none prose-headings:scroll-mt-20 prose-headings:font-semibold prose-headings:tracking-tight prose-headings:text-slate-50 prose-p:text-slate-300 prose-li:text-slate-300 prose-strong:text-slate-100 prose-a:font-medium prose-a:text-indigo-400 prose-a:no-underline hover:prose-a:text-indigo-300 prose-code:before:content-none prose-code:after:content-none prose-pre:p-4 prose-pre:shadow-inner prose-th:text-slate-200 prose-td:text-slate-300";
 
 export function MarkdownLesson({ markdown }: Props) {
   return (
@@ -24,14 +24,14 @@ export function MarkdownLesson({ markdown }: Props) {
             const route = resolveCurriculumHref(href);
             if (route) {
               return (
-                <Link href={route} className="text-indigo-600 hover:text-indigo-800">
+                <Link href={route} className="text-indigo-400 hover:text-indigo-300">
                   {children}
                 </Link>
               );
             }
             if (isExercisePath(href) || href.startsWith("exercises/")) {
               return (
-                <code className="font-mono text-sm text-slate-700">
+                <code className="font-mono text-sm text-emerald-200">
                   {href.replace(/^\.\.\/\.\.\//, "")}
                 </code>
               );
@@ -42,14 +42,14 @@ export function MarkdownLesson({ markdown }: Props) {
                   href={href}
                   target="_blank"
                   rel="noreferrer"
-                  className="text-indigo-600 hover:text-indigo-800"
+                  className="text-indigo-400 hover:text-indigo-300"
                 >
                   {children}
                 </a>
               );
             }
             return (
-              <code className="font-mono text-sm text-slate-700">{href}</code>
+              <code className="font-mono text-sm text-emerald-200">{href}</code>
             );
           },
         }}

@@ -9,6 +9,12 @@ export function resolveCurriculumHref(href: string): string | null {
   if (normalized === "../glossary.md" || normalized.endsWith("glossary.md")) {
     return "/glossary";
   }
+  if (
+    normalized === "../setup-your-machine.md" ||
+    normalized.endsWith("setup-your-machine.md")
+  ) {
+    return "/setup";
+  }
   const weekMatch = normalized.match(/week-(\d{2})\.md$/);
   if (weekMatch) {
     return `/week/week-${weekMatch[1]}`;

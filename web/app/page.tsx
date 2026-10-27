@@ -23,8 +23,8 @@ export default async function HomePage() {
             Agent evaluation engineer
           </h1>
           <p className="mt-4 max-w-xl text-lg text-slate-300">
-            16 weeks — harnesses, graders, and gauntlet loops. Lessons from your
-            repo; exercises in the terminal with{" "}
+            16 weeks — harnesses, graders, and gauntlet loops. Works on
+            Linux, macOS, and Windows. Exercises in the terminal with{" "}
             <code className="rounded bg-white/10 px-1.5 py-0.5 text-sm text-indigo-100">
               uv run pytest
             </code>
@@ -50,8 +50,8 @@ export default async function HomePage() {
       <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
         {phases.map((phase) => (
           <section key={phase} className="mb-12">
-            <h2 className="text-lg font-bold text-slate-900">{phase}</h2>
-            <p className="mt-1 text-sm text-slate-500">
+            <h2 className="text-lg font-bold text-slate-100">{phase}</h2>
+            <p className="mt-1 text-sm text-slate-400">
               {weeks.filter((w) => w.phase === phase).length} modules
             </p>
             <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -61,18 +61,18 @@ export default async function HomePage() {
                   <li key={w.id}>
                     <Link
                       href={`/week/${w.id}`}
-                      className={`group flex h-full flex-col rounded-xl border border-slate-200/80 bg-white p-5 shadow-sm transition hover:border-indigo-200 hover:shadow-md border-l-4 ${phaseAccent(phase)}`}
+                      className={`group flex h-full flex-col rounded-xl border border-slate-700/80 bg-slate-900 p-5 shadow-sm transition hover:border-indigo-500/50 hover:shadow-md hover:shadow-indigo-950/30 border-l-4 ${phaseAccent(phase)}`}
                     >
-                      <span className="text-xs font-bold uppercase tracking-wide text-indigo-600">
+                      <span className="text-xs font-bold uppercase tracking-wide text-indigo-400">
                         Week {w.number}
                       </span>
-                      <span className="mt-2 flex-1 text-base font-semibold leading-snug text-slate-900 group-hover:text-indigo-700">
+                      <span className="mt-2 flex-1 text-base font-semibold leading-snug text-slate-100 group-hover:text-indigo-300">
                         {w.title.replace(/^Week \d+ —\s*/i, "")}
                       </span>
-                      <span className="mt-4 text-xs font-medium text-slate-400">
+                      <span className="mt-4 text-xs font-medium text-slate-500">
                         {w.exerciseDir}
                       </span>
-                      <span className="mt-3 text-sm font-semibold text-indigo-600">
+                      <span className="mt-3 text-sm font-semibold text-indigo-400">
                         Open module →
                       </span>
                     </Link>

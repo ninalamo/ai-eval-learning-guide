@@ -84,7 +84,7 @@ Folder: [exercises/week-10](../../exercises/week-10/)
 
 ## Stretch
 
-- Add `sandbox="docker"` and a `bash()` tool to make the model reverse a file on disk. Requires Docker.
+- Add `sandbox="docker"` and a `bash()` tool to make the model reverse a file on disk. Requires Docker Desktop (Windows/macOS) or Docker Engine (Linux). See [Setup your machine](../setup-your-machine.md).
 - Swap `generate()` for `react()` with one tool.
 
 ## Definition of done

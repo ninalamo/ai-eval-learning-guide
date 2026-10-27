@@ -60,6 +60,8 @@ A test that asserts `len(inspect.signature(grade_exact).parameters) == 3` will b
 
 The other failure: a GitHub Action that `pip install pytest` onto `python:latest` with no pin. You already know why lockfiles exist. Use `uv sync --frozen` once you have a lockfile; for this week `uv sync --all-groups` is acceptable because the exercise `pyproject.toml` pins major versions.
 
+The sample workflow in `exercises/week-02/workflow/eval-ci.yml` runs on **ubuntu-latest** — typical for eval repos. Your job is to keep pytest green on **your** OS (Windows, macOS, or Linux); CI is the shared Linux check.
+
 ## Must-do exercise
 
 Folder: [exercises/week-02](../../exercises/week-02/)

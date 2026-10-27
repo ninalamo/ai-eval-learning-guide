@@ -2,6 +2,12 @@
 
 Read this once. Then open week 1. Do not re-learn software engineering.
 
+## Your machine (all platforms)
+
+Lessons and exercises work on **Fedora**, **Ubuntu**, **macOS**, and **Windows**. Install [uv](https://docs.astral.sh/uv/), use a project `.venv` per exercise folder, and write paths with **`pathlib`** so graders behave the same in CI and on your laptop.
+
+Full install notes, terminals (PowerShell, Git Bash, WSL), Docker, and encoding: **[Setup your machine](setup-your-machine.md)**.
+
 ## Profile you are transferring from
 
 Senior full-stack: C#, ASP.NET Core, Blazor, EF Core, SQL Server. Azure (OpenAI, Functions, Key Vault, App Insights). Microservices, TDD, integration tests, Docker, CI/CD. PR reviewer. Instructor of OOP and application development. Production AI feature: control-evidence health monitoring with Azure OpenAI. Daily driver: Cursor.
@@ -67,7 +73,7 @@ Use this as a cheat sheet through weeks 1–4. After that, stop translating and 
 - **Indentation is the block.** There are no braces. A misplaced indent is a logic bug, not a style nit.
 - **Everything is a reference**, including lists and dicts. Mutating a default argument (`def f(xs=[])`) is the classic trap. Use `None` and allocate inside.
 - **No implicit interfaces.** Protocols (`typing.Protocol`) are structural, like a lightweight `interface`, but you opt in with types — the runtime will not stop a wrong object unless you check.
-- **Virtual env is not optional.** `uv` creates `.venv`. Do not `pip install` into system Python.
+- **Virtual env is not optional.** `uv` creates `.venv`. Do not `pip install` into the OS Python (Linux distro packages, macOS `python3`, Windows Store Python, etc.).
 - **`async` is contagious.** Mixing `httpx` async with `subprocess` sync is fine if you are explicit. Random `asyncio.run` inside already-running loops is not.
 - **Packaging:** put library code under `src/<package>/`. Tests import the package, not sibling files via `sys.path` hacks.
 

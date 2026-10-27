@@ -14,4 +14,27 @@
   html {
     scroll-behavior: smooth;
   }
+
+  body {
+    @apply bg-slate-950 text-slate-100 antialiased;
+  }
+}
+
+/* Fenced code: typography styles inline `code` inside `pre` — reset so console blocks stay readable */
+@layer components {
+  .lesson-prose pre {
+    @apply overflow-x-auto rounded-lg border border-slate-700/80 bg-slate-950 text-slate-100;
+  }
+
+  .lesson-prose pre code {
+    background-color: transparent !important;
+    color: inherit !important;
+    padding: 0 !important;
+    font-size: inherit;
+    font-weight: inherit;
+  }
+
+  .lesson-prose :not(pre) > code {
+    @apply rounded bg-slate-800 px-1.5 py-0.5 text-sm text-emerald-200;
+  }
 }

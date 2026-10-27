@@ -7,7 +7,7 @@ export default async function GlossaryPage() {
   if (!markdown) {
     return (
       <div className="mx-auto max-w-3xl px-4 py-12">
-        <p className="text-slate-600">Glossary file not found.</p>
+        <p className="text-slate-400">Glossary file not found.</p>
       </div>
     );
   }
@@ -20,7 +20,7 @@ export default async function GlossaryPage() {
           { label: "Glossary" },
         ]}
       />
-      <div className="rounded-xl border border-slate-200 bg-white p-6 shadow-sm sm:p-8">
+      <div className="rounded-xl border border-slate-700 bg-slate-900/60 p-6 shadow-sm sm:p-8">
         <MarkdownLesson markdown={markdown} />
       </div>
     </div>

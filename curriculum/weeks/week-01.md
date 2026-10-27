@@ -36,13 +36,17 @@ Optional if `with` still feels magic: [contextlib](https://docs.python.org/3/lib
 
 ### Runtime
 
-Python is installed on Fedora. **Do not use it for this course.** `uv` creates `.venv` in the exercise folder and pins dependencies in `pyproject.toml`. That isolation is the same reason you do not restore NuGet into `C:\Windows`.
+Every OS ships *some* Python. **Do not use that interpreter for this course** (Fedora/Ubuntu system packages, macOS `python3`, Windows Store Python, etc.). `uv` downloads a pinned Python and creates `.venv` in the exercise folder, with dependencies in `pyproject.toml`. That isolation is the same reason you do not restore NuGet into `C:\Windows` or `/usr`.
+
+From the repo root (Linux, macOS, Git Bash, or PowerShell):
 
 ```bash
 cd exercises/week-01
 uv sync
 uv run pytest
 ```
+
+On Windows CMD: `cd exercises\week-01` then the same `uv` commands. If `uv` is missing, see [Setup your machine](../setup-your-machine.md).
 
 `uv run` is `dotnet test --` for “run this command inside the project environment.”
 
@@ -67,7 +71,7 @@ class TestResult:
 
 ### pathlib
 
-`Path("data") / "results.json"` is path combine. `.read_text(encoding="utf-8")` is explicit about encoding — do not rely on locale. Eval artifacts move between Linux CI and your laptop; encoding bugs show up as “the grader failed mysteriously.”
+`Path("data") / "results.json"` is path combine on **Linux, macOS, and Windows** — never `dir + "\\" + file`. `.read_text(encoding="utf-8")` is explicit about encoding; do not rely on locale. Eval artifacts move between Linux CI and your laptop; encoding bugs show up as “the grader failed mysteriously.”
 
 ### Context managers
 

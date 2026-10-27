@@ -2,6 +2,8 @@
 
 Each file uses the same contract (time box, goal, readings, exercise, definition of done). Start at [week 01](week-01.md) unless you are compressing 1–2.
 
+Commands in lessons use a Unix-style shell (`bash`, `zsh`, Git Bash, or PowerShell with the same `uv` invocations). See [Setup your machine](../setup-your-machine.md) for Windows paths and tooling.
+
 | Week | File |
 |------|------|
 | 1 | [week-01.md](week-01.md) |

@@ -49,24 +49,24 @@ export function DefinitionOfDone({ weekId, items }: Props) {
 
   return (
     <section
-      className="mt-10 overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm"
+      className="mt-10 overflow-hidden rounded-xl border border-slate-700 bg-slate-900/80 shadow-sm"
       aria-labelledby="dod-heading"
     >
-      <div className="border-b border-slate-100 bg-gradient-to-r from-indigo-50 to-violet-50 px-6 py-4">
+      <div className="border-b border-slate-700 bg-gradient-to-r from-indigo-950/80 to-violet-950/80 px-6 py-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <div>
             <h2
               id="dod-heading"
-              className="text-lg font-bold text-slate-900"
+              className="text-lg font-bold text-slate-50"
             >
               Definition of done
             </h2>
-            <p className="mt-1 text-sm text-slate-600">
+            <p className="mt-1 text-sm text-slate-400">
               Check off each item before you move on. Saved in this browser.
             </p>
           </div>
           <div className="text-right">
-            <p className="text-2xl font-bold tabular-nums text-indigo-600">
+            <p className="text-2xl font-bold tabular-nums text-indigo-400">
               {pct}%
             </p>
             <p className="text-xs font-medium text-slate-500">
@@ -74,32 +74,34 @@ export function DefinitionOfDone({ weekId, items }: Props) {
             </p>
           </div>
         </div>
-        <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/80 ring-1 ring-slate-200/80">
+        <div className="mt-4 h-2 overflow-hidden rounded-full bg-slate-950 ring-1 ring-slate-700">
           <div
             className="h-full rounded-full bg-gradient-to-r from-indigo-500 to-violet-600 transition-all duration-300"
             style={{ width: `${pct}%` }}
           />
         </div>
       </div>
-      <ul className="divide-y divide-slate-100 px-2 py-2">
+      <ul className="divide-y divide-slate-800 px-2 py-2">
         {items.map((label, index) => {
           const isOn = Boolean(checked[index]);
           return (
             <li key={index}>
               <label
-                className={`flex cursor-pointer gap-3 rounded-lg px-4 py-3 transition hover:bg-slate-50 ${
-                  isOn ? "bg-emerald-50/50" : ""
+                className={`flex cursor-pointer gap-3 rounded-lg px-4 py-3 transition hover:bg-slate-800/60 ${
+                  isOn ? "bg-emerald-950/30" : ""
                 }`}
               >
                 <input
                   type="checkbox"
                   checked={isOn}
                   onChange={() => toggle(index)}
-                  className="mt-1 h-4 w-4 shrink-0 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+                  className="mt-1 h-4 w-4 shrink-0 rounded border-slate-600 bg-slate-950 text-indigo-500 focus:ring-indigo-500 focus:ring-offset-slate-900"
                 />
                 <span
                   className={`text-sm leading-relaxed ${
-                    isOn ? "text-slate-700 line-through decoration-slate-400" : "text-slate-800"
+                    isOn
+                      ? "text-slate-500 line-through decoration-slate-600"
+                      : "text-slate-200"
                   }`}
                 >
                   {label}

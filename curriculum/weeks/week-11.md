@@ -41,7 +41,7 @@ If the instruction includes the grep, you leaked.
 
 ### Oracle is a harness test
 
-`solve.sh` runs as if it were a perfect agent. If oracle fails, you do not have a task. The local helper `verify_local.py` runs solve then test in a temp dir with a fake `/logs/verifier`. You can finish this week without installing the Harbor CLI.
+`solve.sh` runs as if it were a perfect agent. If oracle fails, you do not have a task. The local helper `verify_local.py` runs solve then test in a temp dir with a fake `/logs/verifier`. It works on **Fedora, Ubuntu, macOS, and Windows** — you do not need WSL or the Harbor CLI to finish the week. The `.sh` files mirror what runs **inside** a Linux container in production; on Windows, rely on `verify_local.py` unless you choose Git Bash/WSL for stretch.
 
 ### Two shapes
 

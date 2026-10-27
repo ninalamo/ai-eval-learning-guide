@@ -29,7 +29,8 @@ Time box: **~8 hours** (2 read, 4 build, 2 write-up). Compression path: 12 weeks
 
 ## Assumptions
 
-- Fedora, Python 3.12+, [uv](https://docs.astral.sh/uv/), Docker, git.
+- **OS:** Fedora, Ubuntu (or similar Linux), macOS, or Windows 10/11 — see [Setup your machine](curriculum/setup-your-machine.md).
+- Python 3.12+ via [uv](https://docs.astral.sh/uv/), Docker (for later harness weeks), git.
 - One model API for later weeks: Azure OpenAI (you already shipped this) or OpenAI/Anthropic. Cheap models for loops. Scripted/oracle agents when the lesson is the harness, not the model.
 - Do **not** run all of SWE-bench Verified. Tiny frozen suites (3–10 tasks) until the process is muscle memory.
 
@@ -80,6 +81,7 @@ You can author a Harbor-format task, explain why a trusting harness is worthless
 
 ## Docs
 
+- [Setup your machine](curriculum/setup-your-machine.md) — Fedora, Ubuntu, macOS, Windows
 - [Start here — profile gap and C# maps](curriculum/00-start-here.md)
 - [Glossary](curriculum/glossary.md)
 - [Weeks](curriculum/weeks/)

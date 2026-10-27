@@ -1,3 +1,5 @@
+> **Platforms:** Fedora, Ubuntu, macOS, Windows — [setup guide](../../curriculum/setup-your-machine.md). Use `uv run` from this folder after `uv sync`. On Windows, `cd exercises\week-NN` or forward slashes both work.
+
 # Week 11 exercise — two Harbor-format tasks
 
 Fill `instruction.md`, `tests/test.sh`, and `solution/solve.sh` for both tasks.
