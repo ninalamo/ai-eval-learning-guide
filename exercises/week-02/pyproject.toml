@@ -1,0 +1,33 @@
+[project]
+name = "week02-grader"
+version = "0.1.0"
+description = "Week 2: exact-match grader with pytest, ruff, mypy"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "pytest>=8.0",
+    "ruff>=0.8",
+    "mypy>=1.13",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+target-version = "py312"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+packages = ["grader"]
+mypy_path = "src"
+
+[tool.uv]
+package = false

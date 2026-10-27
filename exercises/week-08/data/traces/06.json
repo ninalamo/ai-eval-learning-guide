@@ -1,0 +1,11 @@
+{
+  "trace_id": "06",
+  "task": "When done, call submit with the integer answer.",
+  "events": [
+    {"type": "assistant", "text": "I will make a plan."},
+    {"type": "assistant", "text": "Step 1: think. Step 2: think more."},
+    {"type": "assistant", "text": "Updated plan: still thinking."},
+    {"type": "limit", "reason": "max_turns"}
+  ],
+  "outcome": {"tests_passed": false, "error": "no submit", "tools_called": []}
+}

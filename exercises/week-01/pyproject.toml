@@ -1,0 +1,16 @@
+[project]
+name = "week01-summarize"
+version = "0.1.0"
+description = "Week 1: port a C# test-result summarizer to Python"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

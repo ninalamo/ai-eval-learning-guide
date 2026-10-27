@@ -1,0 +1,16 @@
+[project]
+name = "week15-adapter"
+version = "0.1.0"
+description = "Week 15: real agent adapter"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

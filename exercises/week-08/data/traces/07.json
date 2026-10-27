@@ -1,0 +1,15 @@
+{
+  "trace_id": "07",
+  "task": "Implement add(a, b) returning a+b. Print nothing.",
+  "agent_patch": "def add(a, b):\n    return a + b\n",
+  "hidden_test": "def test_add(capsys):\n    assert add(2, 2) == 4\n    stdout = capsys.readouterr().out\n    assert stdout == ''\n",
+  "events": [
+    {"type": "tool_call", "name": "write_file", "args": {"path": "/app/add.py", "content": "import logging\nlogging.info('add')\ndef add(a, b):\n    return a + b\n"}},
+    {"type": "final", "text": "implemented add"}
+  ],
+  "outcome": {
+    "tests_passed": false,
+    "error": "AssertionError: stdout == 'INFO:add\\n' but expected ''",
+    "unit_behavior_correct": true
+  }
+}

@@ -1,0 +1,54 @@
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+uv.lock
+
+# Eval / lab tooling
+.inspect/
+*.eval-log
+logs/
+lab-notes/*.local.md
+
+# Secrets
+.env
+.env.*
+!.env.example
+exercises/**/.env
+!exercises/**/.env.example
+
+# Exercise outputs (learner-generated)
+exercises/**/.venv/
+exercises/**/__pycache__/
+exercises/**/artifacts/
+exercises/week-08/answers.json
+
+# Node / Next.js (web/)
+web/node_modules/
+web/.next/
+web/out/
+web/.turbo/
+web/.vercel/
+web/*.log
+web/npm-debug.log*
+web/.env.local
+web/.env*.local
+
+# IDEs & OS
+.idea/
+.vs/
+.vscode/
+*.user
+.DS_Store
+Thumbs.db

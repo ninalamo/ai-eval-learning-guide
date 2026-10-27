@@ -1,0 +1,15 @@
+schema_version = "1.3"
+
+[task]
+name = "local/fix-clamp"
+
+[metadata]
+category = "unit-test"
+difficulty_explanation = "Fix a one-line Python bug."
+
+[agent]
+timeout_sec = 60.0
+
+[verifier]
+timeout_sec = 30.0
+environment_mode = "separate"

@@ -1,0 +1,10 @@
+{
+  "trace_id": "02",
+  "task": "Install pytest in the sandbox and run tests/test_app.py.",
+  "harness": {"timeout_sec": 30, "network": "allowlist:pypi.org"},
+  "events": [
+    {"type": "tool_call", "name": "bash", "args": {"cmd": "pip install pytest"}},
+    {"type": "tool_result", "name": "bash", "ok": false, "stdout": "Collecting pytest\n  Downloading... 15%\n", "killed": true, "elapsed_sec": 30}
+  ],
+  "outcome": {"tests_passed": false, "error": "timeout"}
+}

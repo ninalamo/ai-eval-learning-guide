@@ -1,0 +1,52 @@
+[
+  {
+    "id": "t1_capital",
+    "output": "Paris",
+    "expected": "paris",
+    "schema_required": null,
+    "tools_called": ["search"],
+    "required_tools": [],
+    "human_pass": 1,
+    "judge_keywords_any": ["paris"]
+  },
+  {
+    "id": "t2_json",
+    "output": "{\"city\":\"Paris\",\"ok\":true}",
+    "expected": "{\"city\":\"Paris\",\"ok\":true}",
+    "schema_required": ["city", "ok"],
+    "tools_called": ["read_file"],
+    "required_tools": ["read_file"],
+    "human_pass": 1,
+    "judge_keywords_any": ["paris"]
+  },
+  {
+    "id": "t3_skipped_tool",
+    "output": "4",
+    "expected": "4",
+    "schema_required": null,
+    "tools_called": ["guess"],
+    "required_tools": ["read_file"],
+    "human_pass": 0,
+    "judge_keywords_any": []
+  },
+  {
+    "id": "t4_schema_wrong_city",
+    "output": "{\"city\":\"Lyon\",\"ok\":true}",
+    "expected": "{\"city\":\"Paris\",\"ok\":true}",
+    "schema_required": ["city", "ok"],
+    "tools_called": ["read_file"],
+    "required_tools": ["read_file"],
+    "human_pass": 0,
+    "judge_keywords_any": ["paris"]
+  },
+  {
+    "id": "t5_paraphrase",
+    "output": "The capital is Paris.",
+    "expected": "paris",
+    "schema_required": null,
+    "tools_called": ["search"],
+    "required_tools": [],
+    "human_pass": 1,
+    "judge_keywords_any": ["paris"]
+  }
+]

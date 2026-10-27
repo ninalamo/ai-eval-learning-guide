@@ -1,0 +1,16 @@
+[project]
+name = "week06-graders"
+version = "0.1.0"
+description = "Week 6: exact, schema, trajectory, judge"
+requires-python = ">=3.12"
+dependencies = []
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

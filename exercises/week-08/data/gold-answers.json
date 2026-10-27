@@ -1,0 +1,42 @@
+[
+  {
+    "trace_id": "01",
+    "repair_surface": "tool_contract",
+    "notes": "Agent called delete_file because the description of read_file and delete_file overlap. Fix the tool descriptions, not the prompt essay."
+  },
+  {
+    "trace_id": "02",
+    "repair_surface": "harness",
+    "notes": "Agent was still installing deps when the 30s wall hit. Raise timeout or snapshot the env; a prompt will not make pip faster."
+  },
+  {
+    "trace_id": "03",
+    "repair_surface": "task",
+    "notes": "Instruction requires JSON; gold file is YAML. The agent followed the instruction. Change the task or the gold, not the model."
+  },
+  {
+    "trace_id": "04",
+    "repair_surface": "environment",
+    "notes": "ImportError for pydantic in the sandbox image. Rebuild the image; prompting cannot pip-install a missing wheel if network is locked."
+  },
+  {
+    "trace_id": "05",
+    "repair_surface": "prompt",
+    "notes": "System prompt forbids tools; the task cannot be done without read_file. Remove the ban or the task is unsolvable by policy."
+  },
+  {
+    "trace_id": "06",
+    "repair_surface": "prompt",
+    "notes": "Agent never called submit; it looped on plan. Add an explicit stop/submit contract in the agent scaffold."
+  },
+  {
+    "trace_id": "07",
+    "repair_surface": "grader",
+    "notes": "Hidden test compares full stdout including a timestamp. The function is correct. Fix the grader."
+  },
+  {
+    "trace_id": "08",
+    "repair_surface": "model_ceiling",
+    "notes": "Open-ended research-grade proof with a tiny model and no tools. Changing the prompt is theater."
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {"trace_id": "01", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "02", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "03", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "04", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "05", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "06", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "07", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""},
+  {"trace_id": "08", "symptom": "", "suspected_cause": "", "repair_surface": "", "proposed_mutation": "", "notes": ""}
+]

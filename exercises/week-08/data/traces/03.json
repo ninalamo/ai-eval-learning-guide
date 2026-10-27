@@ -1,0 +1,10 @@
+{
+  "trace_id": "03",
+  "task": "Write the user record as JSON to /app/out.json. Schema: {name: string, age: number}.",
+  "gold_file_preview": "name: Ada\nage: 36\n",
+  "events": [
+    {"type": "tool_call", "name": "write_file", "args": {"path": "/app/out.json", "content": "{\"name\":\"Ada\",\"age\":36}"}},
+    {"type": "final", "text": "wrote /app/out.json"}
+  ],
+  "outcome": {"tests_passed": false, "error": "expected YAML mapping, got JSON object"}
+}

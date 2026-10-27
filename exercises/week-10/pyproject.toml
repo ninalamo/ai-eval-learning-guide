@@ -1,0 +1,16 @@
+[project]
+name = "week10-inspect"
+version = "0.1.0"
+description = "Week 10: one Inspect AI task"
+requires-python = ">=3.12"
+dependencies = ["inspect-ai>=0.3.70"]
+
+[dependency-groups]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.uv]
+package = false

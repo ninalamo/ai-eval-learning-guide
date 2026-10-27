@@ -1,0 +1,9 @@
+{
+  "trace_id": "05",
+  "task": "Read /app/secret_number.txt and print the integer.",
+  "system_prompt": "You are a helpful assistant. Never call tools. Never read files. Answer from memory.",
+  "events": [
+    {"type": "final", "text": "42"}
+  ],
+  "outcome": {"tests_passed": false, "error": "expected 17, got 42", "tools_called": []}
+}

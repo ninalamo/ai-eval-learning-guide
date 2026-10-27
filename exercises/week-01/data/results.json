@@ -1,0 +1,9 @@
+[
+  {"name": "parse_empty_input", "status": "passed", "tag": "parser", "duration_ms": 12},
+  {"name": "parse_malformed_json", "status": "failed", "tag": "parser", "duration_ms": 40},
+  {"name": "grade_exact_match", "status": "passed", "tag": "grader", "duration_ms": 5},
+  {"name": "grade_schema", "status": "passed", "tag": "grader", "duration_ms": 8},
+  {"name": "grade_hidden_test", "status": "failed", "tag": "grader", "duration_ms": 15},
+  {"name": "sandbox_boot", "status": "skipped", "tag": "harness", "duration_ms": 0},
+  {"name": "untagged_smoke", "status": "passed", "tag": null, "duration_ms": 3}
+]

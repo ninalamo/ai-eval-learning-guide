@@ -1,0 +1,5 @@
+{
+  "system_prompt": "You are a coding agent.",
+  "timeout_sec": 5,
+  "tool_description": "tools: bash, write_file"
+}

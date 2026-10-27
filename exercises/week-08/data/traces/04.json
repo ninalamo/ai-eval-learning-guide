@@ -1,0 +1,10 @@
+{
+  "trace_id": "04",
+  "task": "Validate payload.json with pydantic and print ok.",
+  "environment": {"image": "python:3.12-slim", "pip_packages": []},
+  "events": [
+    {"type": "tool_call", "name": "bash", "args": {"cmd": "python /app/validate.py"}},
+    {"type": "tool_result", "name": "bash", "ok": false, "stderr": "ModuleNotFoundError: No module named 'pydantic'"}
+  ],
+  "outcome": {"tests_passed": false, "error": "ImportError"}
+}
